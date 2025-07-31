@@ -7,12 +7,12 @@ export default function ContactModal() {
     <>
       {/* Floating Button */}
       <button
-        className="fixed bottom-6 right-6 z-50 bg-cyan-600 hover:bg-cyan-800 text-white rounded-full p-4 shadow-lg transition-all animate-bounce"
+        className="fixed top-6 left-6 z-50 bg-cyan-600 hover:bg-cyan-800 text-white rounded-full p-2 shadow-lg transition-all"
         aria-label="Contact Info"
         onClick={() => setOpen(true)}
       >
         {/* User Icon SVG */}
-        <svg width="32" height="32" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+        <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="10" stroke="#22d3ee" strokeWidth="2" fill="#22d3ee" />
           <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="white" />
         </svg>

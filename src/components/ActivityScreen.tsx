@@ -122,26 +122,11 @@ export default function ActivityScreen({ activityType, onComplete, onBack }: Act
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 p-4">
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6 pt-4">
-          <button
-            onClick={onBack}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5 mr-2" />
-            Back
-          </button>
-          
+        <div className="flex items-center justify-center mb-6 pt-4">
           <div className="text-center">
             <h1 className="text-xl font-bold text-gray-800">{getActivityTitle()}</h1>
             <p className="text-sm text-gray-600">Slide {currentSlide + 1} of {TOTAL_SLIDES}</p>
           </div>
-          
-          <button
-            onClick={onBack}
-            className="flex items-center text-gray-600 hover:text-gray-800 transition-colors"
-          >
-            <Home className="w-5 h-5" />
-          </button>
         </div>
 
         {/* Progress Bar */}
