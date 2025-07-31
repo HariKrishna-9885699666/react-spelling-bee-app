@@ -4,6 +4,7 @@ import { ActivityType } from '../data/words';
 
 interface LandingPageProps {
   onActivitySelect: (activity: ActivityType) => void;
+  onWordListSelect: (type: 'word-list-1' | 'word-list-2') => void;
 }
 
 const activities = [
@@ -41,7 +42,7 @@ const activities = [
   },
 ];
 
-export default function LandingPage({ onActivitySelect }: LandingPageProps) {
+export default function LandingPage({ onActivitySelect, onWordListSelect }: LandingPageProps) {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-100 via-orange-50 to-pink-100 p-4">
       <div className="max-w-4xl mx-auto">
@@ -56,6 +57,22 @@ export default function LandingPage({ onActivitySelect }: LandingPageProps) {
           <p className="text-lg text-gray-600 max-w-md mx-auto">
             Practice your spelling skills with fun interactive activities!
           </p>
+        </div>
+
+        {/* Word List Buttons */}
+        <div className="flex justify-center gap-4 mb-8">
+          <button
+            className="bg-blue-400 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full shadow text-sm"
+            onClick={() => onWordListSelect('word-list-1')}
+          >
+            Word List 1
+          </button>
+          <button
+            className="bg-green-400 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full shadow text-sm"
+            onClick={() => onWordListSelect('word-list-2')}
+          >
+            Word List 2
+          </button>
         </div>
 
         {/* Activity Cards */}
