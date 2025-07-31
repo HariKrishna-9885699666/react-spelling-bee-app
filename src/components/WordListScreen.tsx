@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { WORD_POOL } from "../data/words";
 
-const WORDS_PER_PAGE = 50;
+const WORDS_PER_PAGE = 20;
 
 export default function WordListScreen({ onBack }: { onBack: () => void }) {
   const [page, setPage] = useState(0);
